@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+    
+      
+
+document.getElementById("btnSubmit").onclick = function() {
+    var radios = document.getElementsByName("band-rock");
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            console.log("Escolheu: " + radios[i].value);
+        }
+    }
+};
+
+        function operacao (op) {
+           
+           if (somar.check === true ) {
+            resultado.value = parseInt(v1.value) + parseInt(v2.value)   
+            
+           } else if (sub.check === true) {
+            resultado.value = parseInt(v1.value) - parseInt(v2.value)   
+           } else if ( mult.check === true) {
+            resultado.value = parseInt(v1.value) * parseInt(v2.value)
+           } else if (divid .check === true) {
+            resultado.value = parseInt(v1.value) / parseInt(v2.value)
+           } else {
+               alert("eu não sei oq fazer");
+           }
+           
+           
+        }
+                 
+
+            console.log(op); 
+        
+    </script>
+
+    <form action = "" >
+      valor1: <input type="text" id="v1" value="0"><br>
+      valor2: <input type="text" id="v2" value="0"><br>
+      <input type="radio" id="Somar"  name="op" onclick="operacao('+' )" > Soma
+      <input type="radio" id="subtrair" name="op" onclick="operacao('-')"> subtrair
+      <input type="radio" id="multiplicar" name="op" onclick="operacao('*')"> multiplicar
+      <input type="radio" id="dividir" name="op" onclick="operacao('/')"> Dividir
+      <br>
+
+      <input type="button" value="executar" onclick="operacao"> 
+       <br>
+      
+       Resultado: <input type="text" id="resultado" value="0" readonly>
+    </form>   
+</body>
+</html>
